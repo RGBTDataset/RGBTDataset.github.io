@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
 
   </head>
+  <script type="text/javascript" src="ZeroClipboard.js"></script>
   <body>
     <section class="page-header">
       <h1 class="project-name">RGBT Dataset</h1>
@@ -29,7 +30,16 @@
 -->
 <p><strong><font color="#FF0000">Please copy the following link to download the dataset<font color="#000000" size="2">[size:1.5GB,containing 50 sequences]</font> </font></strong>
 <hr/>
-<p>download link: <input type="text" style="width:500px" value="http://180.153.189.49/share.php?method=Share.download&cqid=203a112715d47412774fee231e5a2dbe&dt=39.110cc2048aa418f6cbbb63f3a5f00a66&e=1429274375&fhash=afa920d87ee5641051880b285c568a5ea6ad5d6f&fname=jdk-1_5_0_22-linux-i586-rpm.bin&fsize=47930001&nid=13734526173917381&scid=39&st=41ae2ab12bffb751e234e39a9b0275dd&xqid=154541136" readonly></p>
+download link: <input type="text" name="text" id="text" style="width:500px" value="http://180.153.189.49/share.php?method=Share.download&cqid=203a112715d47412774fee231e5a2dbe&dt=39.110cc2048aa418f6cbbb63f3a5f00a66&e=1429274375&fhash=afa920d87ee5641051880b285c568a5ea6ad5d6f&fname=jdk-1_5_0_22-linux-i586-rpm.bin&fsize=47930001&nid=13734526173917381&scid=39&st=41ae2ab12bffb751e234e39a9b0275dd&xqid=154541136" readonly>
+<input type="submit" name="btn_copy" value="copy" id="btn_submit" />
+
+<script type="text/javascript">
+var clip = new ZeroClipboard.Client();
+clip.setHandCursor(true);
+var text= document.getElementById('text').value;
+clip.setText(text);					
+clip.glue("btn_submit");
+</script>
 <hr/>
 
 <h4 style="font-weight:bold">Dataset Description</h4>
