@@ -26,22 +26,11 @@
 <a id="download-the-dataset" class="anchor" href="#download-the-dataset" aria-hidden="true" ><span class="octicon octicon-link"></span></a><a href="http://180.153.189.49/share.php?method=Share.download&cqid=203a112715d47412774fee231e5a2dbe&dt=39.110cc2048aa418f6cbbb63f3a5f00a66&e=1429274375&fhash=afa920d87ee5641051880b285c568a5ea6ad5d6f&fname=jdk-1_5_0_22-linux-i586-rpm.bin&fsize=47930001&nid=13734526173917381&scid=39&st=41ae2ab12bffb751e234e39a9b0275dd&xqid=154541136">download the dataset<font size="2">[1.3GB]</font></font></a>
 </h1>
 -->
-<p><strong><font color="#FF0000">You can download the dataset<font color="#000000" size="2">[size:1.5GB,containing 50 sequences]</font> by copying the following link into the address bar of your browser. </font></strong>
+<p><strong><font color="#FF0000">Please copy the following link to download the dataset<font color="#000000" size="2">[size:1.5GB,containing 50 sequences]</font> </font></strong>
 <hr/>
 <p>download link: <input type="text" style="width:500px" value="http://180.153.189.49/share.php?method=Share.download&cqid=203a112715d47412774fee231e5a2dbe&dt=39.110cc2048aa418f6cbbb63f3a5f00a66&e=1429274375&fhash=afa920d87ee5641051880b285c568a5ea6ad5d6f&fname=jdk-1_5_0_22-linux-i586-rpm.bin&fsize=47930001&nid=13734526173917381&scid=39&st=41ae2ab12bffb751e234e39a9b0275dd&xqid=154541136" readonly></p>
 <hr/>
-<h4 style="font-weight:bold">About the Dataset</h4>
-<p>To construct a reasonable and comprehensive benchmark dataset for online RGBT tracking algorithms, we collected 50 RGBT video pairs (4 challenging video pairs from OSU Color-Thermal [5] and LITIV [6] for high diversity) under different scenarios and conditions, and manually annotated them with ground truth bounding boxes.
-</p>
-<h5 style="font-weight:bold">&bull; Hardware Setup</h5>
-<p>Our recording system consists of an online thermal imager(MAG32) and a CCD camera (SONY TD-2073). We mount these two cameras in tripods, and make their views overlapped as much as possible for convenient alignment.
-</p>
-<h5 style="font-weight:bold">&bull; Alignment</h5>
-<p> Unlike industry registration in RGBD sensors, we manually construct the recording system, and develop an annotation tool to align RGBT videos in following way. We uniformly select a number of point correspondences in keyframe of the video pair, and compute the homography matrix by the least-square method. Then, the video pair can be aligned by applying the computed homography matrix to transform remaining frame pairs. This registration method can accurately align video pairs due to two main reasons. First, we carefully choose the planar and non-planar scenes to make the homography assumption effective. Second, since two camera views are almost coincident as we made, the transformation between two views is simple.</p>
-<h5 style="font-weight:bold">&bull; Annotation</h5>
-<p>Due to manually aligning in video pairs, we annotate the  ground truth of dataset by drawing minimum bounding  boxes covering the targets on both visible and thermal  frames. In particular, all frames are manually annotated  by one person to keep high consistency of dataset. When  occlusion occurs, the ground truth is annotated by a minimum bounding box covering only the visible portion of the  target. When the target of one modal frame is ambiguous  while another is distinguishable, we define its ground truth  as distinguishable one.</p>
-
-<h5 style="font-weight:bold">&bull; Statistics</h5>
+<h4 style="font-weight:bold">Dataset Description</h4>
 
 <p>We record video pairs under sixteen different scene types,such as laboratory room, campus road, play ground and water pool, and detailedly analyze the diversity and bias of the constructed dataset in following aspects:</p>
 
@@ -55,7 +44,7 @@
 
 <p>According to above analysis, we summarize eight attributes to construct the subsets of whole dataset for facilitating evaluation of trackers on different challenging factors, as shown in Tab. 1. We also present the attribute distribution in Fig. 1 (b). Aside from presenting the performance on the whole dataset, we further analyze the attribute-based performance for better understanding the trackers under specific challenging conditions. Due to space limitations, we present other dataset statistics in the supplementary material</p>
 <hr/>
-<h4 style="color:black"> Table 1. List of the attributes annotated to our RGBT dataset</h4>
+<h4 style="color:black" align="center"> Table 1. List of the attributes annotated to our RGBT dataset</h4>
 <table border="1">
 <tr style="color:red;font-weight:bold">
 <td>attribute</td>
@@ -98,13 +87,13 @@
 </table>
 <hr/>
 
-<h4 style="color:black">Figure 1. Dataset Statistics.</h4>
-<img src="/images/benchmarkStatistics.jpg"  width="3000px" height="500px"/>
 
+<img src="/images/benchmarkStatistics.jpg"  width="3000px" height="500px"/>
+<h4 style="color:black" align="center">Figure 1. Dataset Statistics.</h4>
 
 <hr/>
-<h4 style="color:black">Figure 2.  Illustrations of some quintessential samples with annotated attributes in our dataset</h4>
 <img src="/images/benchmarkSamples.jpg"  width="3000px" height="800px"/>
+<h4 style="color:black" align="center">Figure 2.  Illustrations of 50 samples </h4>
 <hr/>
 <!--
       <footer class="site-footer">
