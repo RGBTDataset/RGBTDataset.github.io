@@ -33,15 +33,15 @@
 <h4 style="font-weight:bold">About the Dataset</h4>
 <p>To construct a reasonable and comprehensive benchmark dataset for online RGBT tracking algorithms, we collected 50 RGBT video pairs (4 challenging video pairs from OSU Color-Thermal [5] and LITIV [6] for high diversity) under different scenarios and conditions, and manually annotated them with ground truth bounding boxes.
 </p>
-<h6 style="font-weight:bold">&bull; Hardware Setup</h6>
+<h5 style="font-weight:bold">&bull; Hardware Setup</h5>
 <p>Our recording system consists of an online thermal imager(MAG32) and a CCD camera (SONY TD-2073). We mount these two cameras in tripods, and make their views overlapped as much as possible for convenient alignment.
 </p>
-<h6 style="font-weight:bold">&bull; Alignment</h6>
+<h5 style="font-weight:bold">&bull; Alignment</h5>
 <p> Unlike industry registration in RGBD sensors, we manually construct the recording system, and develop an annotation tool to align RGBT videos in following way. We uniformly select a number of point correspondences in keyframe of the video pair, and compute the homography matrix by the least-square method. Then, the video pair can be aligned by applying the computed homography matrix to transform remaining frame pairs. This registration method can accurately align video pairs due to two main reasons. First, we carefully choose the planar and non-planar scenes to make the homography assumption effective. Second, since two camera views are almost coincident as we made, the transformation between two views is simple.</p>
-<h6 style="font-weight:bold">&bull; Annotation</h6>
+<h5 style="font-weight:bold">&bull; Annotation</h5>
 <p>Due to manually aligning in video pairs, we annotate the  ground truth of dataset by drawing minimum bounding  boxes covering the targets on both visible and thermal  frames. In particular, all frames are manually annotated  by one person to keep high consistency of dataset. When  occlusion occurs, the ground truth is annotated by a minimum bounding box covering only the visible portion of the  target. When the target of one modal frame is ambiguous  while another is distinguishable, we define its ground truth  as distinguishable one.</p>
 
-<h6 style="font-weight:bold">&bull; Statistics</h6>
+<h5 style="font-weight:bold">&bull; Statistics</h5>
 
 <p>We record video pairs under sixteen different scene types,such as laboratory room, campus road, play ground and water pool, and detailedly analyze the diversity and bias of the constructed dataset in following aspects:</p>
 
