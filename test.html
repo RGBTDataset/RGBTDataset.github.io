@@ -1,0 +1,23 @@
+<html>
+<head>
+
+
+</head>
+
+<body>
+<input id='a' type='button' value='Testing Button' onClick="tips() style='background:grey' onMouseOver='ChangeColor()' onMouseout='RevertColor()'"></input>
+<script type='text/javascript'> 
+ function ChangeColor()
+ {
+  document.getElementById('a').style.backgroundColor="lightblue"
+ }
+ function RevertColor()
+ {
+  document.getElementById('a').style.backgroundColor="grey"
+ }
+ function tips(){
+	alert("Copied!");
+ }
+</script>
+</body>
+</html>
